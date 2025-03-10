@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav.fixed-top {
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: none; /* No shadow initially */
+}
+
+/* Shadow effect when scrolling */
+nav.fixed-top.scrolled {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a light bottom shadow when scrolling */
+}
+.navbar {
+  position: fixed;
+}
+
+.moving-image {
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+}
+
+/* double tick icon in list */
+.custom-list {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0; /* Remove default padding */
+}
+
+.custom-list li {
+  background-image: url('./assets/custom-icon.png'); /* Path to your custom icon */
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /* Adjust size of the icon */
+  background-position: 0 50%; /* Center the icon vertically */
+  padding-left: 25px; /* Space for the icon */
+}
+
+/* email input button size custom */
+.custom-email-input {
+  max-width: 600px; /* Set desired maximum width */
+  width: 100%; /* Ensure it uses full width within the max limit */
+}
+
+/* Change link color to green on hover */
+.navbar-nav .nav-item a:hover {
+  color: #28a745 !important; /* Green color */
+}
+
+/* Custom style for nested dropdowns */
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Additional styles */
+.card-body-first {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.col-2.text-start a {
+  text-decoration: none;
+  color: black;
+}
+
+.newsletter {
+  background-color: snow;
+}
+
+.servicegreenhover {
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border: 1px solid transparent; /* Initial border to prevent layout shift */
+}
+
+.servicegreenhover:hover {
+  border-color: #28a745; /* Change border color on hover */
+  
+}
+
+.servicegreenhover:hover .card-title {
+  color: #28a745; /* Change card title color to green on hover */
+}
+
+.servicegreenhover:hover .card-body i {
+  color: #28a745; /* Change icon color to green on hover */
+}
+
+
+
+
+
+
+/* Hover effect for the card */
+.abouttextgreen .card {
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Move the card up when hovered */
+.abouttextgreen .card:hover {
+  transform: translateY(-10px); /* Move the card up */
+  border-color: #28a745; /* Change border color to green */
+}
+
+/* Change card title color on hover */
+.abouttextgreen .card:hover .card-title {
+  color: #28a745; /* Change card title to green */
+}
+
+/* Ensure card icons remain unaffected */
+.abouttextgreen .card i {
+  transition: color 0.3s ease;
+}
+
+.abouttextgreen .card:hover i {
+  color: #28a745; /* Change icon color to green on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+  margin-top: 150px;
+}
+
+.portfolio-item {
+  position: relative;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  width: 80%; /* Smaller than the image */
+  height: 20%; /* Adjust height of the box */
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  bottom: 10px; /* Position in the center */
+  left: 50%; /* Position in the center */
+  transform: translate(-50%); /* Center the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visibility */
+}
+
+.portfolio-description {
+  color: black; /* Black text inside the white box */
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1; /* Show the box on hover */
+}
+
+.porttextgreen:hover {
+  color: #28a745; /* Change portfolio links to green */
+}
+
+/* Carousel part */
+
+/* Team watermark */
+.margin {
+  margin-top: -40px;
+}
+
+.portfoliowm {
+  color: rgba(226, 223, 223, 0.8);
+}
+
+/* .team-overlay {
+  border: 1px solid rgb(221, 217, 217);
+} */
+
+/* Team text position
+.container .row .col-lg-4 .shadow {
+  margin-top: -60px;
+} */
+
+/* Testimonial section background */
+.testimonialcolor {
+  background-color: rgba(200, 200, 200, 0.2); /* Slightly different light gray */
+}
+
+/* Testimonial card quote background */
+.test-card-body {
+  background-color: rgba(211, 211, 211, 0.5); /* Light gray with opacity */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Icon border color to green */
+.navbarlinkred :hover {
+  border-color:  #28a745; /* Change border color on hover */
+}
+
+
+/* Team css */
+
+.team-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.team-img-abs {
+  height: 90px;
+  width: 85%;
+  position: absolute;
+  bottom: -50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: solid white;
+  background-color: white;
+}
+
+.team-img-abs h6 {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.team-img-abs hr {
+  margin: 5px 15px;
+  height: 2px;
+  width: 20%;
+}
+
+.fst-italic {
+  font-size: small;
+  margin-left: -10px;
+}
+
+.social-media a {
+  color: darkgray;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+
+
+
+
+/* contact section css */
+#contact h1 {
+  color: rgba(241, 238, 238, 0.75);
+  margin-bottom: -55px;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+#contact h2 {
+  color: #5f687b;
+}
+
+.cont-shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.icon-hov {
+  transition: 0.3s;
+}
+
+.icon-hov:hover {
+  transform: translateY(-3px);
+}
+
+.icons {
+  background-color: #10bc69;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.icons i {
+  font-size: 18px;
+}
+
+#contact iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form .btn {
+  background-color: #10bc69;
+  border: none;
+  font-size: 16px;
+}
+
+form .btn:hover {
+  background-color: #0a944f;
+}
+
+
+
+
+/* Change link color to gray */
+.link-hov li a {
+  color: gray !important;
+}
+
+/* Change link color on hover */
+.link-hov li a:hover {
+  color: black !important;
+}
+
+
+
+/* Back to Top Button */
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #28a745; /* Green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Icon inside the button */
+.scroll-arrow i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Hover effect */
+.scroll-arrow:hover {
+  background-color: #218838; /* Darker green */
+  transform: scale(1.1);
+}
